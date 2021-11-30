@@ -25,12 +25,14 @@ SECRET_KEY = 'django-insecure-i*9((9z9(**%f)_4$x0*v!84a(ezg&6o^#uo_ibc3z(te&#vpv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["10.0.0.39"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'sensors.apps.AirSensorsConfig',
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -123,3 +125,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Others
+X_FRAME_OPTIONS = 'SAMEORIGIN'
